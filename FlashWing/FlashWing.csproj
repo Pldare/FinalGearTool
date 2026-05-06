@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBD4E288-D031-4AE7-A951-AE6E206C55FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlashWing</RootNamespace>
+    <AssemblyName>FlashWing</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.Core.3.2.56\lib\net462\protobuf-net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.7.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HIME\Model\Common\AddBuffTiming.cs" />
+    <Compile Include="HIME\Model\Common\ATBossStatus.cs" />
+    <Compile Include="HIME\Model\Common\BattleEventTypes.cs" />
+    <Compile Include="HIME\Model\Common\BattleGroupFightingStatus.cs" />
+    <Compile Include="HIME\Model\Common\BubbleProcessStatus.cs" />
+    <Compile Include="HIME\Model\Common\BuffExclusionStatus.cs" />
+    <Compile Include="HIME\Model\Common\CollectTypes.cs" />
+    <Compile Include="HIME\Model\Common\DamageTypes.cs" />
+    <Compile Include="HIME\Model\Common\DataTypes.cs" />
+    <Compile Include="HIME\Model\Common\Enum\Achievement.cs" />
+    <Compile Include="HIME\Model\Common\Enum\ActivityType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\BikiniGacyaType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\BuffType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\DisplayType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\ErrorCode.cs" />
+    <Compile Include="HIME\Model\Common\Enum\ExploreEventType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\GirlQualityType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\JackpotID.cs" />
+    <Compile Include="HIME\Model\Common\Enum\LocationType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\OpenArea.cs" />
+    <Compile Include="HIME\Model\Common\Enum\RecruitActivityType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\SceneSubType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\SceneType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\ShipQualityType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\StarshipMoveAction.cs" />
+    <Compile Include="HIME\Model\Common\Enum\StuffType.cs" />
+    <Compile Include="HIME\Model\Common\Enum\WidgetQualityType.cs" />
+    <Compile Include="HIME\Model\Common\EPreCarRoomState.cs" />
+    <Compile Include="HIME\Model\Common\ExpeditionMissionGetTypes.cs" />
+    <Compile Include="HIME\Model\Common\ExpeditionMissionStatus.cs" />
+    <Compile Include="HIME\Model\Common\ExpeditionMissionTypes.cs" />
+    <Compile Include="HIME\Model\Common\FGMailType.cs" />
+    <Compile Include="HIME\Model\Common\FriendTypes.cs" />
+    <Compile Include="HIME\Model\Common\HistoricalRecordTypes.cs" />
+    <Compile Include="HIME\Model\Common\NationWarFalg.cs" />
+    <Compile Include="HIME\Model\Common\ObjState.cs" />
+    <Compile Include="HIME\Model\Common\OperationCode.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ATBossRankAwardView.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ATBossView.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\BeforeDawnOrder.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\BigEventMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\BigEventStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\BikiniBossMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\BubbleInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\CriticalPointRewardPoolCell.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\DailyStageCount.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\DataType.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\DropItem.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\EventData.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\FloorInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\GirlNature.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\MiniMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\NewYearBossMissions.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoAccumulateLogin.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoAchievement.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoAchiRankLvl.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoActivity.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoActivityAchievement.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoActivityConfig.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoActivityDailyMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoActivityMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoArea.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoAreaDailyMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoAreaMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoATAssistRecord.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoATBossInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoATBossRankView.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoATPlayer.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoATRecordForView.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoAttribute.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBase.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBattleDesc.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBattleDrop.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBattleEventData.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBattleGroup.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBattleMonsterStatus.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBattleReport.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBeachVolleyball.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBeforeDawn.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBigEvent.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBikiniBackground.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBikiniBBQ.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBikiniBoss.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBikiniSeaFloor.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBikiniStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBikiniStageMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBikiniTask.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoBuild.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoCG.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoCharge.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoChristmas.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoChristmasMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoCollect.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoCombinedMachineStatus.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoCriticalPointAchievement.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoCriticalPointJackpot.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoCriticalPointMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoCriticalPointStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoDailyFlag.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEffectChange.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEffectiveTenRecruitTime.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEVAAreaRepairInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEVABase.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEVAChapter.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEVADiffDesc.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEVAGirl.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEVAOrder.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEVATechRoom.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEveOfNationalWarPVE.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoEveOfNationalWarPVP.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoExpeditionMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoExploreEventsLog.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoFighterDesc.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoFriend.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoFriendData.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoFriendGirlInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoFriendInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoGacya.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoGacyaHistory.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoGhostMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoGirl.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoGirlBattleStatus.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoGirlBubble.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoGirlLevelInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoGirlMirror.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoGirlSkinConfig.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoHistoryView.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoHonor.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoHonorBase.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoItem.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMail.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVBase.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVDispatchGirlInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVLeakSourceInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVLowCostInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVPreTaskActivity.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVPreTaskRoomInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVRoom.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVRoomOrder.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVRoomOrderProcess.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMCVRoomProduce.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoMiniMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoNationalWar.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoNationalWarBattleDesc.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoNationalWarCampInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoNationalWarFighterDesc.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoNationalWarFightLog.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoNationalWarHexStatus.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoNewYearBoss.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoNightmareStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoNotice.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoPang.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoPlayer.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoPlayerInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoPlayerMirror.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoQuickCollectBubble.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoQuickCollectMCV.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoRanking.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoRecruit.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoRiceCake.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoRoleBattleGroup.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoRookieTask.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSakuraWars.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSeasonBattleGroup.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSeasonFighter.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSeasonFightLog.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSeriesLogin.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSevenLogin.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoShopItem.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoShopItemLikeInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSignInMonth.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSpecialRanking.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStageDropView.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarship.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarshipBase.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarshipExplore.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarshipExploreChapter.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarshipExploreEvent.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarshipFetter.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarshipPVPFormation.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarshipWeapon.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarshipWeaponFavor.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStarTowerStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoStoryStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSuitDevelop.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoSweetActivity.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTalentPlayer.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTalentTower.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTask.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTechTree.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTenRecruit.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTenRecruitConfig.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTexun.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTodayTotalInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTower.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTowerBossProperty.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoTowerStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoURAwakeConfig.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoViewItem.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoWeeklyMission.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoWeeklyShop.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoWeeklyStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoWidget.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoWidgetExchange.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ProtoWidgetGroup.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\RequestOperation.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ResponseOperation.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\ResponsePack.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\RewardPool.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\StarshipFetter.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\StarshipFetterTask.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\StarTowerStageInfo.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\SweetAchievement.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\SweetGirl.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\SweetStage.cs" />
+    <Compile Include="HIME\Model\Common\Protocol\TeamMember.cs" />
+    <Compile Include="HIME\Model\Common\RankingTypes.cs" />
+    <Compile Include="HIME\Model\Common\RecruitSubTypes.cs" />
+    <Compile Include="HIME\Model\Common\RewardGetState.cs" />
+    <Compile Include="HIME\Model\Common\RookieTaskState.cs" />
+    <Compile Include="HIME\Model\Common\StageStatus.cs" />
+    <Compile Include="HIME\Model\Common\StarshipAttackUnitTypes.cs" />
+    <Compile Include="HIME\Model\Common\StarshipExploreEventStarType.cs" />
+    <Compile Include="HIME\Model\Common\StarshipExploreEventTerrainType.cs" />
+    <Compile Include="HIME\Model\Common\StarshipGunType.cs" />
+    <Compile Include="HIME\Model\Common\WidgetType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
