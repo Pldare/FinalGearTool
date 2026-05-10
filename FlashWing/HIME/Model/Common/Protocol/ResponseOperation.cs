@@ -1,4 +1,4 @@
-﻿using ProtoBuf;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,5 +25,16 @@ namespace FlashWing.HIME.Script.Model.Common.Protocol
         public Dictionary<DataTypes, HashSet<ProtoBase>> ReturnCache;
         [ProtoMember(7)]
         public Dictionary<DataTypes, HashSet<byte[]>> ReturnCacheBytes;
+
+        public ResponseOperation()
+        {
+
+        }
+        public ResponseOperation(OperationCode operation, long userId, DataType type = DataType.Response)
+        {
+            this.Operation = operation;
+            this.UserId = userId;
+            this.ResponseType = type;
+        }
     }
 }
